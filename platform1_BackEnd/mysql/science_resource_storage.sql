@@ -1,0 +1,41 @@
+use science_resource;
+create table storage
+(
+    id          int auto_increment
+        primary key,
+    key_word    varchar(63)                            not null comment '文件的唯一索引',
+    name        varchar(255)                           not null comment '文件名',
+    type        varchar(255)                           not null comment '文件类型',
+    size        int                                    not null comment '文件大小',
+    url         varchar(255)                           null comment '文件访问链接',
+    add_time    datetime                               null comment '创建时间',
+    update_time datetime                               null comment '更新时间',
+    is_deleted  tinyint(1) unsigned zerofill default 0 null comment '逻辑删除'
+)
+    comment '文件存储表' collate = utf8mb4_general_ci;
+
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (438, '1617875782227.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/medical/storage/fetch/1617875782227.docx', '2021-04-08 17:56:22', '2021-04-08 17:56:22', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (439, '1618306485143.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/medical/storage/fetch/1618306485143.docx', '2021-04-13 17:34:45', '2021-04-13 17:34:45', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (440, '1618388933419.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/medical/storage/fetch/1618388933419.jpg', '2021-04-14 16:28:53', '2021-04-14 16:28:53', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (441, '1618389096718.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/medical/storage/fetch/1618389096718.docx', '2021-04-14 16:31:37', '2021-04-14 16:31:37', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (442, '1618389096726.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/medical/storage/fetch/1618389096726.jpg', '2021-04-14 16:31:37', '2021-04-14 16:31:37', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (443, '1618391802644.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618391802644.jpg', '2021-04-14 17:16:43', '2021-04-14 17:16:43', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (444, '1618391870962.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618391870962.jpg', '2021-04-14 17:17:51', '2021-04-14 17:17:51', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (445, '1618392057103.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618392057103.jpg', '2021-04-14 17:20:57', '2021-04-14 17:20:57', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (446, '1618392128677.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618392128677.jpg', '2021-04-14 17:22:09', '2021-04-14 17:22:09', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (447, '1618392128692.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618392128692.docx', '2021-04-14 17:22:09', '2021-04-14 17:22:09', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (448, '1618406228847.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618406228847.jpg', '2021-04-14 21:17:09', '2021-04-14 21:17:09', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (449, '1618406228860.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618406228860.docx', '2021-04-14 21:17:09', '2021-04-14 21:17:09', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (450, '1618406319968.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618406319968.docx', '2021-04-14 21:18:40', '2021-04-14 21:18:40', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (451, '1618411583755.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618411583755.jpg', '2021-04-14 22:46:24', '2021-04-14 22:46:24', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (452, '1618456022079.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618456022079.jpg', '2021-04-15 11:07:02', '2021-04-15 11:07:02', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (453, '1618458851119.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618458851119.docx', '2021-04-15 11:54:11', '2021-04-15 11:54:11', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (454, '1618459246593.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618459246593.jpg', '2021-04-15 12:00:47', '2021-04-15 12:00:47', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (455, '1618459621529.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618459621529.docx', '2021-04-15 12:07:02', '2021-04-15 12:07:02', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (456, '1618459735125.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618459735125.docx', '2021-04-15 12:08:55', '2021-04-15 12:08:55', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (457, '1618460051275.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618460051275.docx', '2021-04-15 12:14:11', '2021-04-15 12:14:11', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (458, '1618460208677.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618460208677.docx', '2021-04-15 12:16:49', '2021-04-15 12:16:49', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (459, '1618462432422.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618462432422.jpg', '2021-04-15 12:53:52', '2021-04-15 12:53:52', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (460, '1618467195231.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618467195231.docx', '2021-04-15 14:13:15', '2021-04-15 14:13:15', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (461, '1618468340377.docx', '2.3PPT图.docx', 'application/octet-stream', 864638, 'resource/storage/science/storage/fetch/1618468340377.docx', '2021-04-15 14:32:20', '2021-04-15 14:32:20', 0);
+INSERT INTO science_resource.storage (id, key_word, name, type, size, url, add_time, update_time, is_deleted) VALUES (462, '1618468340390.jpg', '服务流程图 (1).jpg', 'image/jpeg', 142461, 'resource/storage/science/storage/fetch/1618468340390.jpg', '2021-04-15 14:32:20', '2021-04-15 14:32:20', 0);

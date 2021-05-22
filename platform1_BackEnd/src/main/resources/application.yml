@@ -1,0 +1,17 @@
+server.port: 9870
+spring:
+  profiles:
+    active: dev #默认为开发环境
+
+mybatis:
+  mapper-locations:
+  - classpath:dao/*.xml
+  - classpath*:cn/*/mapper/*.xml
+mybatis-plus:
+  type-enums-package: com.science.resource.enums
+  type-handlers-package: com.science.resource.typeHandlers
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
