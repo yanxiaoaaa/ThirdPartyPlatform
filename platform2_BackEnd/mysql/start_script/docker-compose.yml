@@ -1,0 +1,19 @@
+version: '3'
+services:
+  # 服务名称
+  nginx:
+    # 镜像:版本
+    image: nginx:latest
+    # 1、自定义容器名
+    container_name: my_nginx
+    # 2、映射容器80端口到本地8000端口 ps规则为 [本机端口号]:[容器内部端口号]
+    ports:
+     - "8000:80"
+    # 数据卷 映射本地文件到容器
+    volumes:
+    # 3、修改配置及相关内容 映射nginx.conf文件到容器的/etc/nginx/conf.d目录并覆盖default.conf文件
+     - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    # 4、文件路径为当前目录or绝对目录 映射build文件夹到容器的/usr/share/nginx/html文件夹
+     - ./build:/usr/share/nginx/html
+    # 覆盖容器启动后默认执行的命令。
+    command: /bin/bash -c "nginx -g 'daemon off;'"

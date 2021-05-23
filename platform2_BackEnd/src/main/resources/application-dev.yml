@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    dynamic:
+      primary: localDB
+      datasource:
+        localDB:
+          url: jdbc:mysql://10.112.14.63:7664/science_resource?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+#        faqDB:
+#          url: jdbc:mysql://10.112.205.250:3306/faq_management?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+#          username: tyx
+#          password: tyx
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+Local:
+  address: resource/storage/science/storage/fetch/
+  storagePath: storage
+
